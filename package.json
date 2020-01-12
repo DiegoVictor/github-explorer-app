@@ -10,13 +10,13 @@
     "@react-native-community/async-storage": "^1.6.1",
     "axios": "^0.19.0",
     "prop-types": "^15.7.2",
-    "react": "16.8.6",
-    "react-native": "0.60.5",
-    "react-native-gesture-handler": "^1.4.1",
-    "react-native-reanimated": "^1.2.0",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-gesture-handler": "^1.5.3",
+    "react-native-reanimated": "^1.4.0",
     "react-native-vector-icons": "^6.6.0",
     "react-native-webview": "^7.0.1",
-    "react-navigation": "^4.0.0",
+    "react-navigation": "^4.0.10",
     "react-navigation-stack": "^1.5.1",
     "reactotron-react-native": "^3.6.5",
     "styled-components": "^4.3.2"
@@ -41,13 +41,12 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "factory-girl": "^5.0.4",
+    "faker": "^4.1.0",
     "jest": "^24.1.0",
     "metro-react-native-babel-preset": "0.54.1",
     "mock-async-storage": "^2.2.0",
     "prettier": "^1.18.2",
-    "react-test-renderer": "16.8.6"
-  },
-  "jest": {
-    "preset": "react-native"
+    "react-test-renderer": "16.9.0"
   }
 }
