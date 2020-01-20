@@ -18,10 +18,7 @@ import {
   ProfileButtonText,
 } from './styles';
 
-export default class Main extends Component {
-  static navigationOptions = {
-    title: 'Usuários',
-  };
+export default function Main({ navigation }) {
 
   static propTypes = {
     navigation: PropTypes.shape({
@@ -119,4 +116,9 @@ export default class Main extends Component {
       </Container>
     );
   }
-}
+
+Main.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
+};

@@ -18,10 +18,7 @@ import {
   Loading,
 } from './styles';
 
-export default class User extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam('user').name,
-  });
+export default function User({ navigation }) {
 
   static propTypes = {
     navigation: PropTypes.shape({
@@ -111,4 +108,10 @@ export default class User extends Component {
       </Container>
     );
   }
-}
+
+User.propTypes = {
+  navigation: PropTypes.shape({
+    getParam: PropTypes.func.isRequired,
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
