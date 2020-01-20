@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ActivityIndicator } from 'react-native';
 import PropTypes from 'prop-types';
-import Api from '../../services/Api';
 
+import api from '~/services/api';
 import {
   Container,
   Header,
