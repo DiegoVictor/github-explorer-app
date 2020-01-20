@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -19,60 +19,39 @@ import {
 } from './styles';
 
 export default function User({ navigation }) {
+  const [stars, setStars] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
 
-  static propTypes = {
-    navigation: PropTypes.shape({
-      getParam: PropTypes.func,
-      navigate: PropTypes.func,
-    }).isRequired,
-  };
+  const user = navigation.getParam('user');
 
-  state = {
-    stars: [],
-    loading: true,
-    refreshing: false,
-    page: 1,
-  };
+  const loadMore = useCallback(() => {
+    (async () => {
+      const { data } = await api.get(`/users/${user.login}/starred`, {
+        params: { page: page + 1 },
+      });
 
-  async componentDidMount() {
-    this.paginate();
+      if (data.length > 0) {
+        setStars([...stars, ...data]);
   }
+      setPage(page + 1);
+      setLoading(false);
+    })();
+  }, [stars, page, user]);
 
-  handleNavigate = repository => {
-    const { navigation } = this.props;
+  const handlePress = useCallback(repository => {
     navigation.navigate('Repository', { repository });
-  };
+  }, []);
 
-  loadMore = async () => {
-    const { page } = this.state;
-    this.paginate(page + 1);
-  };
-
-  refreshList = async () => {
-    this.setState({ stars: [] });
-    this.paginate();
-  };
-
-  paginate = async (page = 1) => {
-    const { navigation } = this.props;
-    const user = navigation.getParam('user');
-    const { stars } = this.state;
-
-    const response = await Api.get(`/users/${user.login}/starred`, {
+  useEffect(() => {
+    (async () => {
+      const { data } = await api.get(`/users/${user.login}/starred`, {
       params: { page },
     });
-
-    this.setState({
-      stars: [...stars, ...response.data],
-      page,
-      loading: false,
-    });
-  };
-
-  render() {
-    const { navigation } = this.props;
-    const { stars, loading, refreshing } = this.state;
-    const user = navigation.getParam('user');
+      setStars(data);
+      setLoading(false);
+    })();
+  }, []);
 
     return (
       <Container>

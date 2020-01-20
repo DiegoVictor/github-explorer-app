@@ -19,63 +19,44 @@ import {
 } from './styles';
 
 export default function Main({ navigation }) {
+  const [newUser, setNewUser] = useState('');
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  static propTypes = {
-    navigation: PropTypes.shape({
-      navigate: PropTypes.func,
-    }).isRequired,
-  };
+  useEffect(() => {
+    (async () => {
+      const starred_users = await AsyncStorage.getItem('users');
 
-  state = {
-    newUser: '',
-    users: [],
-    loading: false,
-  };
-
-  async componentDidMount() {
-    const users = await AsyncStorage.getItem('users');
-    if (users) {
-      this.setState({
-        users: JSON.parse(users),
-      });
+      if (starred_users) {
+        setUsers(starred_users);
     }
-  }
+    })();
+  }, []);
 
-  async componentDidUpdate(_, prevState) {
-    const { users } = this.state;
-    if (prevState.users !== users) {
-      AsyncStorage.setItem('users', JSON.stringify(users));
-    }
-  }
+  const handleAddUser = useCallback(async () => {
+    (async () => {
+      setLoading(true);
 
-  handleAddUser = async () => {
-    const { newUser, users } = this.state;
-
-    this.setState({ loading: true });
-    const response = await Api.get(`/users/${newUser}`);
-    const data = {
-      name: response.data.name,
-      login: response.data.login,
-      bio: response.data.bio,
-      avatar: response.data.avatar_url,
+      const { data } = await api.get(`/users/${newUser}`);
+      const user = {
+        name: data.name,
+        login: data.login,
+        bio: data.bio,
+        avatar: data.avatar_url,
     };
 
-    this.setState({
-      users: [...users, data],
-      newUser: '',
-      loading: false,
-    });
+      setUsers([...users, user]);
+      setNewUser('');
+      setLoading(false);
+      await AsyncStorage.setItem('users', JSON.stringify([...users, user]));
 
     Keyboard.dismiss();
-  };
+    })();
+  }, [newUser]);
 
-  handleNavigate = user => {
-    const { navigation } = this.props;
+  const handleNavigate = useCallback(user => {
     navigation.navigate('User', { user });
-  };
-
-  render() {
-    const { users, newUser, loading } = this.state;
+  }, []);
 
     return (
       <Container>
@@ -85,11 +66,11 @@ export default function Main({ navigation }) {
             autoCapitalize="none"
             placeholder="Adicionar usuário"
             value={newUser}
-            onChangeText={text => this.setState({ newUser: text })}
+          onChangeText={text => setNewUser(text)}
             returnKeyType="send"
-            onSubmitEditing={this.handleAddUser}
+          onSubmitEditing={handleAddUser}
           />
-          <SubmitButton loading={loading} onPress={this.handleAddUser}>
+        <SubmitButton loading={loading} onPress={handleAddUser}>
             {loading ? (
               <ActivityIndicator color="#FFF" />
             ) : (
