@@ -4,11 +4,11 @@ import { StatusBar } from 'react-native';
 import '~/config/ReactotronConfig';
 import Routes from '~/routes';
 
-export default function App() {
+export default () => {
   return (
     <>
       <StatusBar barStyle="light-content" backgroundColor="#7159C1" />
       <Routes />
     </>
   );
-}
+};
