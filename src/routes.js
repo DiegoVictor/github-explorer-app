@@ -5,12 +5,27 @@ import Main from '~/pages/Main';
 import User from '~/pages/User';
 import Repository from '~/pages/Repository';
 
-const Routes = createAppContainer(
+export default createAppContainer(
   createStackNavigator(
     {
-      Main,
-      User,
-      Repository,
+      Main: {
+        screen: Main,
+        navigationOptions: () => ({
+          title: 'Usuários',
+        }),
+      },
+      User: {
+        screen: User,
+        navigationOptions: ({ navigation }) => ({
+          title: navigation.getParam('user').name,
+        }),
+      },
+      Repository: {
+        screen: Repository,
+        navigationOptions: ({ navigation }) => ({
+          title: navigation.getParam('repository').name,
+        }),
+      },
     },
     {
       headerLayoutPreset: 'center',
@@ -24,5 +39,3 @@ const Routes = createAppContainer(
     }
   )
 );
-
-export default Routes;

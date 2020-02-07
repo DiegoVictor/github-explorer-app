@@ -2,8 +2,6 @@ import React from 'react';
 import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
 
-// import { Container } from './styles';
-
 export default function Repository({ navigation }) {
   return (
     <WebView
@@ -12,10 +10,6 @@ export default function Repository({ navigation }) {
     />
   );
 }
-
-Repository.navigationOptions = ({ navigation }) => ({
-  title: navigation.getParam('repository').name,
-});
 
 Repository.propTypes = {
   navigation: PropTypes.shape({
