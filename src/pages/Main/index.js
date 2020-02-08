@@ -35,6 +35,7 @@ export default function Main({ navigation }) {
 
   const handleAddUser = useCallback(async () => {
     (async () => {
+      if (newUser.length > 0) {
       setLoading(true);
 
       const { data } = await api.get(`/users/${newUser}`);
@@ -49,6 +50,7 @@ export default function Main({ navigation }) {
       setNewUser('');
       setLoading(false);
       await AsyncStorage.setItem('users', JSON.stringify([...users, user]));
+      }
 
     Keyboard.dismiss();
     })();
