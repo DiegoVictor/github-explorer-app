@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Keyboard, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
 import api from '~/services/api';
 import {
   Container,
@@ -29,30 +30,30 @@ export default function Main({ navigation }) {
 
       if (starred_users) {
         setUsers(starred_users);
-    }
+      }
     })();
   }, []);
 
   const handleAddUser = useCallback(async () => {
     (async () => {
       if (newUser.length > 0) {
-      setLoading(true);
+        setLoading(true);
 
-      const { data } = await api.get(`/users/${newUser}`);
-      const user = {
-        name: data.name,
-        login: data.login,
-        bio: data.bio,
-        avatar: data.avatar_url,
-    };
+        const { data } = await api.get(`/users/${newUser}`);
+        const user = {
+          name: data.name,
+          login: data.login,
+          bio: data.bio,
+          avatar: data.avatar_url,
+        };
 
-      setUsers([...users, user]);
-      setNewUser('');
-      setLoading(false);
-      await AsyncStorage.setItem('users', JSON.stringify([...users, user]));
+        setUsers([...users, user]);
+        setNewUser('');
+        setLoading(false);
+        await AsyncStorage.setItem('users', JSON.stringify([...users, user]));
       }
 
-    Keyboard.dismiss();
+      Keyboard.dismiss();
     })();
   }, [newUser]);
 
@@ -60,46 +61,48 @@ export default function Main({ navigation }) {
     navigation.navigate('User', { user });
   }, []);
 
-    return (
-      <Container>
-        <Form>
-          <Input
-            autoCorrect={false}
-            autoCapitalize="none"
-            placeholder="Adicionar usuário"
-            value={newUser}
+  return (
+    <Container>
+      <Form>
+        <Input
+          autoCorrect={false}
+          autoCapitalize="none"
+          placeholder="Adicionar usuário"
+          value={newUser}
           onChangeText={text => setNewUser(text)}
-            returnKeyType="send"
+          returnKeyType="send"
           onSubmitEditing={handleAddUser}
-          />
-        <SubmitButton loading={loading} onPress={handleAddUser}>
-            {loading ? (
-              <ActivityIndicator color="#FFF" />
-            ) : (
-              <Icon name="add" size={20} color="#FFF" />
-            )}
-          </SubmitButton>
-        </Form>
+        />
+        <SubmitButton testID="submit" loading={loading} onPress={handleAddUser}>
+          {loading ? (
+            <ActivityIndicator color="#FFF" />
+          ) : (
+            <Icon name="add" size={20} color="#FFF" />
+          )}
+        </SubmitButton>
+      </Form>
 
-        <List
-          data={users}
-          keyExtractor={user => user.login}
+      <List
+        data={users}
+        keyExtractor={user => user.login}
         renderItem={({ item: user }) => (
+          <User testID={`user_${user.login}`}>
             <Avatar source={{ uri: user.avatar }} />
             <Name>{user.name}</Name>
             <Bio>{user.bio}</Bio>
 
             <ProfileButton
+              testID={`user_profile_${user.login}`}
               onPress={() => handleNavigate(user)}
             >
-                <ProfileButtonText>Ver perfil</ProfileButtonText>
-              </ProfileButton>
-            </User>
-          )}
-        />
-      </Container>
-    );
-  }
+              <ProfileButtonText>Ver perfil</ProfileButtonText>
+            </ProfileButton>
+          </User>
+        )}
+      />
+    </Container>
+  );
+}
 
 Main.propTypes = {
   navigation: PropTypes.shape({
