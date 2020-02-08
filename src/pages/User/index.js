@@ -70,15 +70,15 @@ export default function User({ navigation }) {
             data={stars}
             keyExtractor={star => String(star.id)}
             onEndReachedThreshold={0.2}
-            onEndReached={this.loadMore}
-            onRefresh={this.refreshList}
-            refreshing={refreshing}
-            renderItem={({ item }) => (
-              <Starred onPress={() => this.handleNavigate(item)}>
-                <OwnerAvatar source={{ uri: item.owner.avatar_url }} />
+          onEndReached={loadMore}
+          renderItem={({ item: repository }) => (
+            <Starred
+              onPress={() => handlePress(repository)}
+            >
+              <OwnerAvatar source={{ uri: repository.owner.avatar_url }} />
                 <Info>
-                  <Title>{item.name}</Title>
-                  <Author>{item.owner.login}</Author>
+                <Title>{repository.name}</Title>
+                <Author>{repository.owner.login}</Author>
                 </Info>
               </Starred>
             )}

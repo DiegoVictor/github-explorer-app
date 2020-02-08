@@ -82,13 +82,14 @@ export default function Main({ navigation }) {
         <List
           data={users}
           keyExtractor={user => user.login}
-          renderItem={({ item }) => (
-            <User>
-              <Avatar source={{ uri: item.avatar }} />
-              <Name>{item.name}</Name>
-              <Bio>{item.bio}</Bio>
+        renderItem={({ item: user }) => (
+            <Avatar source={{ uri: user.avatar }} />
+            <Name>{user.name}</Name>
+            <Bio>{user.bio}</Bio>
 
-              <ProfileButton onPress={() => this.handleNavigate(item)}>
+            <ProfileButton
+              onPress={() => handleNavigate(user)}
+            >
                 <ProfileButtonText>Ver perfil</ProfileButtonText>
               </ProfileButton>
             </User>
