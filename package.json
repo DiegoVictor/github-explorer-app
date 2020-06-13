@@ -1,6 +1,6 @@
 {
-  "name": "GithubUsersStarsViewer",
-  "version": "0.0.1",
+  "name": "github-users-stars-viewer",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "react-native start",
