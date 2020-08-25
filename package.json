@@ -1,5 +1,5 @@
 {
-  "name": "github-users-stars-viewer",
+  "name": "github-explorer",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,37 +8,45 @@
   },
   "jest": {
     "preset": "@testing-library/react-native",
+    "collectCoverage": true,
+    "coverageDirectory": "tests/coverage",
+    "collectCoverageFrom": [
+      "src/pages/**/*.js",
+      "!src/pages/Repository/*.js"
+    ],
+    "moduleNameMapper": {
+      "^~/(.*)": [
+        "<rootDir>/src/$1",
+        "<rootDir>/tests/$1"
+      ]
+    },
     "setupFilesAfterEnv": [
       "react-native-gesture-handler/jestSetup.js",
       "@testing-library/jest-native/extend-expect",
-      "./__tests__/setup.js"
+      "./tests/setup.js"
     ],
-    "moduleNameMapper": {
-      "^~/(.*)": "<rootDir>/src/$1"
-    },
     "testMatch": [
-      "**/__tests__/**/*.test.js"
-    ],
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/pages/**/*.js",
-      "!src/pages/Repository/index.js"
-    ],
-    "coverageDirectory": "__tests__/coverage"
+      "**/tests/**/*.spec.js"
+    ]
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.1",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/toolbar-android": "^0.1.0-rc.2",
+    "@react-navigation/native": "^5.7.3",
+    "@react-navigation/stack": "^5.9.0",
     "axios": "^0.19.0",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-gesture-handler": "^1.5.3",
-    "react-native-reanimated": "^1.4.0",
+    "react-native-gesture-handler": "^1.7.0",
+    "react-native-reanimated": "^1.13.0",
+    "react-native-safe-area-context": "^3.1.6",
+    "react-native-screens": "^2.10.1",
     "react-native-vector-icons": "^6.6.0",
     "react-native-webview": "^7.0.1",
-    "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^1.5.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "yup": "^0.29.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
