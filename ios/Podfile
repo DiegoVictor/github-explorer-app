@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'GithubUsersStarsViewer' do
-  # Pods for GithubUsersStarsViewer
+target 'GitHubExplorer' do
+  # Pods for GitHubExplorer
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -34,7 +34,7 @@ target 'GithubUsersStarsViewer' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'GithubUsersStarsViewerTests' do
+  target 'GitHubExplorerTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -42,10 +42,10 @@ target 'GithubUsersStarsViewer' do
   use_native_modules!
 end
 
-target 'GithubUsersStarsViewer-tvOS' do
-  # Pods for GithubUsersStarsViewer-tvOS
+target 'GitHubExplorer-tvOS' do
+  # Pods for GitHubExplorer-tvOS
 
-  target 'GithubUsersStarsViewer-tvOSTests' do
+  target 'GitHubExplorer-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

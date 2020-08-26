@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* GithubUsersStarsViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GithubUsersStarsViewerTests.m */; };
+		00E356F31AD99517003FC87E /* GitHubExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GitHubExplorerTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,23 +15,7 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* GithubUsersStarsViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GithubUsersStarsViewerTests.m */; };
-		B8BF367D9329440FADD9BB0E /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA6679C8C0C4451B10C024A /* AntDesign.ttf */; };
-		1F4B1AD3749441939DF6BDA9 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C149B6B310A420D979D7044 /* Entypo.ttf */; };
-		E4E8C2F279C742D885509AEA /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D43D5C4383748979A9B78E0 /* EvilIcons.ttf */; };
-		63704A16A19A45EEBC246884 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9828A584A9884CB6AF238B75 /* Feather.ttf */; };
-		81D79032E39242CCBB7DC17B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47D948EF6745E8AFA6FEFD /* FontAwesome.ttf */; };
-		2122D2B425E54B72B9660ABA /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AA320309C0A495FB96F312A /* FontAwesome5_Brands.ttf */; };
-		F3EA44E61C614D78AD549B43 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 220916C0665D42C1BF6B291B /* FontAwesome5_Regular.ttf */; };
-		894ED62CA17943B0A7445EC2 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 392CECDCA85F44119FD7FD08 /* FontAwesome5_Solid.ttf */; };
-		6896E267A6AC424B856AF40C /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E72AC8CD2B848B8A8C3FF43 /* Fontisto.ttf */; };
-		380A6470B7E04F8CAC1B0266 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E43F4AD4CEC04AAB82D8FC34 /* Foundation.ttf */; };
-		2D37967D85C643E98834711B /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3B8DD504AF24BADABFB8406 /* Ionicons.ttf */; };
-		28FBCCEAA2AE472388198EB2 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D738229F6B5746A68A535D76 /* MaterialCommunityIcons.ttf */; };
-		7BBC5885A9E4439AA7015764 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29999041F7D44D6890412E4B /* MaterialIcons.ttf */; };
-		FE19D463BC9647D6B19A34D5 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F34A9ED78EC4443989D2AAF7 /* Octicons.ttf */; };
-		36C07F147D5B4ACFBEBE2DF3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 437221A68FF14705B6DBA085 /* SimpleLineIcons.ttf */; };
-		473757754FA744D39528ED38 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8EE44EFC44348AE85D9DB14 /* Zocial.ttf */; };
+		2DCD954D1E0B4F2C00145EB5 /* GitHubExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GitHubExplorerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,49 +24,33 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = GithubUsersStarsViewer;
+			remoteInfo = GitHubExplorer;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "GithubUsersStarsViewer-tvOS";
+			remoteInfo = "GitHubExplorer-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* GithubUsersStarsViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubUsersStarsViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* GitHubExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* GithubUsersStarsViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUsersStarsViewerTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* GithubUsersStarsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsersStarsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GithubUsersStarsViewer/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GithubUsersStarsViewer/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* GitHubExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubExplorerTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* GitHubExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GitHubExplorer/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GitHubExplorer/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GithubUsersStarsViewer/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GithubUsersStarsViewer/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GithubUsersStarsViewer/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GithubUsersStarsViewer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GithubUsersStarsViewer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GitHubExplorer/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GitHubExplorer/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GitHubExplorer/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* GitHubExplorer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHubExplorer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* GitHubExplorer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHubExplorer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		1AA6679C8C0C4451B10C024A /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6C149B6B310A420D979D7044 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8D43D5C4383748979A9B78E0 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9828A584A9884CB6AF238B75 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8E47D948EF6745E8AFA6FEFD /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0AA320309C0A495FB96F312A /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		220916C0665D42C1BF6B291B /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		392CECDCA85F44119FD7FD08 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3E72AC8CD2B848B8A8C3FF43 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E43F4AD4CEC04AAB82D8FC34 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B3B8DD504AF24BADABFB8406 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D738229F6B5746A68A535D76 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		29999041F7D44D6890412E4B /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F34A9ED78EC4443989D2AAF7 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		437221A68FF14705B6DBA085 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A8EE44EFC44348AE85D9DB14 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,13 +85,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* GithubUsersStarsViewerTests */ = {
+		00E356EF1AD99517003FC87E /* GitHubExplorerTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* GithubUsersStarsViewerTests.m */,
+				00E356F21AD99517003FC87E /* GitHubExplorerTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = GithubUsersStarsViewerTests;
+			path = GitHubExplorerTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -134,7 +102,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* GithubUsersStarsViewer */ = {
+		13B07FAE1A68108700A75B9A /* GitHubExplorer */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -145,7 +113,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = GithubUsersStarsViewer;
+			name = GitHubExplorer;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -167,9 +135,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* GithubUsersStarsViewer */,
+				13B07FAE1A68108700A75B9A /* GitHubExplorer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* GithubUsersStarsViewerTests */,
+				00E356EF1AD99517003FC87E /* GitHubExplorerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				50AC9D6EA1F34CCAB66E6D8F /* Resources */,
@@ -182,10 +150,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* GithubUsersStarsViewer.app */,
-				00E356EE1AD99517003FC87E /* GithubUsersStarsViewerTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* GitHubExplorer.app */,
+				00E356EE1AD99517003FC87E /* GitHubExplorerTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* GitHubExplorer-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* GitHubExplorer-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,22 +161,6 @@
 		50AC9D6EA1F34CCAB66E6D8F /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				1AA6679C8C0C4451B10C024A /* AntDesign.ttf */,
-				6C149B6B310A420D979D7044 /* Entypo.ttf */,
-				8D43D5C4383748979A9B78E0 /* EvilIcons.ttf */,
-				9828A584A9884CB6AF238B75 /* Feather.ttf */,
-				8E47D948EF6745E8AFA6FEFD /* FontAwesome.ttf */,
-				0AA320309C0A495FB96F312A /* FontAwesome5_Brands.ttf */,
-				220916C0665D42C1BF6B291B /* FontAwesome5_Regular.ttf */,
-				392CECDCA85F44119FD7FD08 /* FontAwesome5_Solid.ttf */,
-				3E72AC8CD2B848B8A8C3FF43 /* Fontisto.ttf */,
-				E43F4AD4CEC04AAB82D8FC34 /* Foundation.ttf */,
-				B3B8DD504AF24BADABFB8406 /* Ionicons.ttf */,
-				D738229F6B5746A68A535D76 /* MaterialCommunityIcons.ttf */,
-				29999041F7D44D6890412E4B /* MaterialIcons.ttf */,
-				F34A9ED78EC4443989D2AAF7 /* Octicons.ttf */,
-				437221A68FF14705B6DBA085 /* SimpleLineIcons.ttf */,
-				A8EE44EFC44348AE85D9DB14 /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -217,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* GithubUsersStarsViewerTests */ = {
+		00E356ED1AD99517003FC87E /* GitHubExplorerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewerTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GitHubExplorerTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -230,14 +182,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = GithubUsersStarsViewerTests;
-			productName = GithubUsersStarsViewerTests;
-			productReference = 00E356EE1AD99517003FC87E /* GithubUsersStarsViewerTests.xctest */;
+			name = GitHubExplorerTests;
+			productName = GitHubExplorerTests;
+			productReference = 00E356EE1AD99517003FC87E /* GitHubExplorerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* GithubUsersStarsViewer */ = {
+		13B07F861A680F5B00A75B9A /* GitHubExplorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewer" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GitHubExplorer" */;
 			buildPhases = (
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -249,14 +201,14 @@
 			);
 			dependencies = (
 			);
-			name = GithubUsersStarsViewer;
-			productName = "GithubUsersStarsViewer";
-			productReference = 13B07F961A680F5B00A75B9A /* GithubUsersStarsViewer.app */;
+			name = GitHubExplorer;
+			productName = "GitHubExplorer";
+			productReference = 13B07F961A680F5B00A75B9A /* GitHubExplorer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* GitHubExplorer-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewer-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GitHubExplorer-tvOS" */;
 			buildPhases = (
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
@@ -268,14 +220,14 @@
 			);
 			dependencies = (
 			);
-			name = "GithubUsersStarsViewer-tvOS";
-			productName = "GithubUsersStarsViewer-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOS.app */;
+			name = "GitHubExplorer-tvOS";
+			productName = "GitHubExplorer-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* GitHubExplorer-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* GitHubExplorer-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewer-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GitHubExplorer-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -286,9 +238,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "GithubUsersStarsViewer-tvOSTests";
-			productName = "GithubUsersStarsViewer-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOSTests.xctest */;
+			name = "GitHubExplorer-tvOSTests";
+			productName = "GitHubExplorer-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* GitHubExplorer-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -315,7 +267,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GithubUsersStarsViewer" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GitHubExplorer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -328,10 +280,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* GithubUsersStarsViewer */,
-				00E356ED1AD99517003FC87E /* GithubUsersStarsViewerTests */,
-				2D02E47A1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* GitHubExplorer */,
+				00E356ED1AD99517003FC87E /* GitHubExplorerTests */,
+				2D02E47A1E0B4A5D006451C7 /* GitHubExplorer-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* GitHubExplorer-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,22 +302,6 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				B8BF367D9329440FADD9BB0E /* AntDesign.ttf in Resources */,
-				1F4B1AD3749441939DF6BDA9 /* Entypo.ttf in Resources */,
-				E4E8C2F279C742D885509AEA /* EvilIcons.ttf in Resources */,
-				63704A16A19A45EEBC246884 /* Feather.ttf in Resources */,
-				81D79032E39242CCBB7DC17B /* FontAwesome.ttf in Resources */,
-				2122D2B425E54B72B9660ABA /* FontAwesome5_Brands.ttf in Resources */,
-				F3EA44E61C614D78AD549B43 /* FontAwesome5_Regular.ttf in Resources */,
-				894ED62CA17943B0A7445EC2 /* FontAwesome5_Solid.ttf in Resources */,
-				6896E267A6AC424B856AF40C /* Fontisto.ttf in Resources */,
-				380A6470B7E04F8CAC1B0266 /* Foundation.ttf in Resources */,
-				2D37967D85C643E98834711B /* Ionicons.ttf in Resources */,
-				28FBCCEAA2AE472388198EB2 /* MaterialCommunityIcons.ttf in Resources */,
-				7BBC5885A9E4439AA7015764 /* MaterialIcons.ttf in Resources */,
-				FE19D463BC9647D6B19A34D5 /* Octicons.ttf in Resources */,
-				36C07F147D5B4ACFBEBE2DF3 /* SimpleLineIcons.ttf in Resources */,
-				473757754FA744D39528ED38 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* GithubUsersStarsViewerTests.m in Sources */,
+				00E356F31AD99517003FC87E /* GitHubExplorerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* GithubUsersStarsViewerTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* GitHubExplorerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,12 +431,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* GithubUsersStarsViewer */;
+			target = 13B07F861A680F5B00A75B9A /* GitHubExplorer */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* GithubUsersStarsViewer-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* GitHubExplorer-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -512,7 +448,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = GithubUsersStarsViewer;
+			path = GitHubExplorer;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -526,7 +462,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = GithubUsersStarsViewerTests/Info.plist;
+				INFOPLIST_FILE = GitHubExplorerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -536,7 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubUsersStarsViewer.app/GithubUsersStarsViewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubExplorer.app/GitHubExplorer";
 			};
 			name = Debug;
 		};
@@ -545,7 +481,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = GithubUsersStarsViewerTests/Info.plist;
+				INFOPLIST_FILE = GitHubExplorerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -555,7 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubUsersStarsViewer.app/GithubUsersStarsViewer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubExplorer.app/GitHubExplorer";
 			};
 			name = Release;
 		};
@@ -565,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = GithubUsersStarsViewer/Info.plist;
+				INFOPLIST_FILE = GitHubExplorer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -573,7 +509,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GithubUsersStarsViewer;
+				PRODUCT_NAME = GitHubExplorer;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -583,7 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = GithubUsersStarsViewer/Info.plist;
+				INFOPLIST_FILE = GitHubExplorer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -591,7 +527,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = GithubUsersStarsViewer;
+				PRODUCT_NAME = GitHubExplorer;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -608,14 +544,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GithubUsersStarsViewer-tvOS/Info.plist";
+				INFOPLIST_FILE = "GitHubExplorer-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GithubUsersStarsViewer-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GitHubExplorer-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -635,14 +571,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GithubUsersStarsViewer-tvOS/Info.plist";
+				INFOPLIST_FILE = "GitHubExplorer-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GithubUsersStarsViewer-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GitHubExplorer-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -661,17 +597,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GithubUsersStarsViewer-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "GitHubExplorer-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GithubUsersStarsViewer-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GitHubExplorer-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubUsersStarsViewer-tvOS.app/GithubUsersStarsViewer-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubExplorer-tvOS.app/GitHubExplorer-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -687,17 +623,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "GithubUsersStarsViewer-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "GitHubExplorer-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GithubUsersStarsViewer-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.GitHubExplorer-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GithubUsersStarsViewer-tvOS.app/GithubUsersStarsViewer-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubExplorer-tvOS.app/GitHubExplorer-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -804,7 +740,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewerTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "GitHubExplorerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -813,7 +749,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewer" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GitHubExplorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -822,7 +758,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewer-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GitHubExplorer-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -831,7 +767,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GithubUsersStarsViewer-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "GitHubExplorer-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -840,7 +776,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GithubUsersStarsViewer" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "GitHubExplorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
