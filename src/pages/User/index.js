@@ -1,15 +1,22 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator } from 'react-native';
-import PropTypes from 'prop-types';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import api from '~/services/api';
+import api from '~/services/github';
 import {
   Container,
+  HeaderContainer,
   Header,
+  BackButton,
+  HeaderImage,
+  User,
   Avatar,
   Name,
   Bio,
   Stars,
+  EmptyList,
+  EmptyListText,
   Starred,
   OwnerAvatar,
   Info,
@@ -18,25 +25,27 @@ import {
   Loading,
 } from './styles';
 
-export default function User({ navigation }) {
+export default () => {
   const [stars, setStars] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  const user = navigation.getParam('user');
+  const navigation = useNavigation();
+  const route = useRoute();
 
-  const loadMore = useCallback(() => {
-    (async () => {
-      const { data } = await api.get(`/users/${user.login}/starred`, {
-        params: { page: page + 1 },
-      });
+  const { user } = route.params;
 
-      if (data.length > 0) {
-        setStars([...stars, ...data]);
-      }
-      setPage(page + 1);
-      setLoading(false);
-    })();
+  const loadMore = useCallback(async () => {
+    const { data } = await api.get(`/users/${user.login}/starred`, {
+      params: { page: page + 1 },
+    });
+
+    if (data.length > 0) {
+      setStars([...stars, ...data]);
+    }
+
+    setPage(page + 1);
+    setLoading(false);
   }, [stars, page, user]);
 
   const handlePress = useCallback(repository => {
@@ -48,6 +57,7 @@ export default function User({ navigation }) {
       const { data } = await api.get(`/users/${user.login}/starred`, {
         params: { page },
       });
+
       setStars(data);
       setLoading(false);
     })();
@@ -55,15 +65,25 @@ export default function User({ navigation }) {
 
   return (
     <Container>
-      <Header>
-        <Avatar source={{ uri: user.avatar }} />
-        <Name>{user.name}</Name>
-        <Bio>{user.bio}</Bio>
-      </Header>
+      <HeaderContainer>
+        <Header>
+          <BackButton onPress={navigation.goBack}>
+            <Icon name="keyboard-arrow-left" color="#FFF" size={20} />
+          </BackButton>
+
+          <HeaderImage />
+        </Header>
+
+        <User>
+          <Avatar source={{ uri: user.avatar }} />
+          <Name>{user.name}</Name>
+          <Bio>{user.bio}</Bio>
+        </User>
+      </HeaderContainer>
 
       {loading ? (
         <Loading>
-          <ActivityIndicator color="#7159C1" />
+          <ActivityIndicator color="#121214" />
         </Loading>
       ) : (
         <Stars
@@ -72,6 +92,11 @@ export default function User({ navigation }) {
           keyExtractor={star => String(star.id)}
           onEndReachedThreshold={0.2}
           onEndReached={loadMore}
+          ListEmptyComponent={
+            <EmptyList>
+              <EmptyListText>Sem repos para listar!</EmptyListText>
+            </EmptyList>
+          }
           renderItem={({ item: repository }) => (
             <Starred
               testID={`repository_${repository.id}`}
@@ -88,11 +113,4 @@ export default function User({ navigation }) {
       )}
     </Container>
   );
-}
-
-User.propTypes = {
-  navigation: PropTypes.shape({
-    getParam: PropTypes.func.isRequired,
-    navigate: PropTypes.func.isRequired,
-  }).isRequired,
 };
