@@ -1,18 +1,37 @@
 import React from 'react';
 import { WebView } from 'react-native-webview';
-import PropTypes from 'prop-types';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default function Repository({ navigation }) {
+import {
+  Container,
+  HeaderContainer,
+  Header,
+  BackButton,
+  HeaderImage,
+} from './styles';
+
+export default () => {
+  const route = useRoute();
+  const navigation = useNavigation();
+
   return (
-    <WebView
-      source={{ uri: navigation.getParam('repository').html_url }}
-      style={{ flex: 1 }}
-    />
-  );
-}
+    <Container>
+      <HeaderContainer>
+        <Header>
+          <BackButton onPress={navigation.goBack}>
+            <Icon name="keyboard-arrow-left" color="#FFF" size={20} />
+          </BackButton>
 
-Repository.propTypes = {
-  navigation: PropTypes.shape({
-    getParam: PropTypes.func,
-  }).isRequired,
+          <HeaderImage />
+        </Header>
+      </HeaderContainer>
+      <WebView
+        source={{
+          uri: route.params.repository.html_url,
+        }}
+        style={{ flex: 1 }}
+      />
+    </Container>
+  );
 };
