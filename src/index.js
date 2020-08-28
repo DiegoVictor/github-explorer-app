@@ -5,9 +5,9 @@ import Routes from '~/routes';
 
 export default () => {
   return (
-    <>
-      <StatusBar barStyle="light-content" backgroundColor="#7159C1" />
+    <React.Fragment>
+      <StatusBar barStyle="light-content" backgroundColor="#121214" />
       <Routes />
-    </>
+    </React.Fragment>
   );
 };
