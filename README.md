@@ -1,8 +1,8 @@
 # About
 This app permit to users track github's users and see their starred projects.<br /><br />
-<img src="https://raw.githubusercontent.com/DiegoVictor/GithubUsersStarsViewer/master/screenshots/main.jpg" width="32%" />
-<img src="https://raw.githubusercontent.com/DiegoVictor/GithubUsersStarsViewer/master/screenshots/user.jpg" width="32%" />
-<img src="https://raw.githubusercontent.com/DiegoVictor/GithubUsersStarsViewer/master/screenshots/jest-dom.jpg" width="32%" />
+<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/master/screenshots/main.png" width="32%" />
+<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/master/screenshots/user.png" width="32%" />
+<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/master/screenshots/repo.png" width="32%" />
 
 # OS
 This app was tested only with Android through USB connection, is strongly recommended to use the same operational system, but of course you can use an emulator or a real device connected through wifi or USB.
