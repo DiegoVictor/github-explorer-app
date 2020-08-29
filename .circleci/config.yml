@@ -2,9 +2,12 @@ version: 2.1
 orbs:
   node: circleci/node@3.0.0
   codecov: codecov/codecov@1.1.1
+jobs:
+  coverage:
+    - codecov/upload:
+        file: tests/coverage/*.json
 workflows:
   node-tests:
     jobs:
       - node/test
-      - codecov/upload:
-          file: tests/coverage/*.json
+      - coverage
