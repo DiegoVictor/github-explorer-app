@@ -3,14 +3,15 @@ orbs:
   node: circleci/node@3.0.0
   codecov: codecov/codecov@1.1.1
 jobs:
-  coverage:
+  build-and-test:
     executor:
       name: node/default
     steps:
+      - checkout
+      - run: npm test
       - codecov/upload:
           file: tests/coverage/*.json
 workflows:
-  node-tests:
+  build-and-test:
     jobs:
-      - node/test
-      - coverage
+      - build-and-test
