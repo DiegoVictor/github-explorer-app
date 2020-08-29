@@ -4,8 +4,8 @@ orbs:
   codecov: codecov/codecov@1.1.1
 jobs:
   coverage:
-    machine:
-      image: ubuntu-1604:202007-01
+    executor:
+      name: node/default
     steps:
       - codecov/upload:
           file: tests/coverage/*.json
