@@ -8,8 +8,10 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - run: npm install
-      - run: npm test
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm test
       - codecov/upload:
           file: tests/coverage/*.json
 workflows:
