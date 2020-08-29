@@ -4,8 +4,9 @@ orbs:
   codecov: codecov/codecov@1.1.1
 jobs:
   coverage:
-    - codecov/upload:
-        file: tests/coverage/*.json
+    steps:
+      - codecov/upload:
+          file: tests/coverage/*.json
 workflows:
   node-tests:
     jobs:
