@@ -58,6 +58,7 @@ Or:
 ```
 $ npm run start
 ```
+> See for more information in [Running On Device](https://reactnative.dev/docs/running-on-device).
 
 ## OS
 This app was tested only with Android through USB connection and [Genymotion](https://www.genymotion.com/) (Emulator), is strongly recommended to use the same operational system, but of course you can use an emulator or a real device connected through wifi or USB.
