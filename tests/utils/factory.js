@@ -9,20 +9,20 @@ factory.define(
     login: faker.internet.userName,
     bio: faker.lorem.paragraph,
     avatar_url: faker.image.imageUrl,
-  }
+  },
 );
 
 factory.define(
   'Repository',
   {},
   {
-    id: faker.random.number,
+    id: faker.datatype.number,
     name: faker.name.findName,
     owner: {
       avatar_url: faker.image.imageUrl,
       login: faker.internet.userName,
     },
-  }
+  },
 );
 
 export default factory;
