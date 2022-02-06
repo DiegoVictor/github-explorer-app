@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  render,
-  fireEvent,
-  waitForElement,
-} from 'react-native-testing-library';
-import { wait } from '@testing-library/react-native';
+import { act, waitFor, render, fireEvent } from '@testing-library/react-native';
 import MockAdapter from 'axios-mock-adapter';
 
 import api from '~/services/github';
@@ -37,11 +32,9 @@ describe('User page', () => {
 
     apiMock.onGet(`${url}${user.login}/starred`).reply(200, []);
 
-    let getByText;
-    await wait(async () => {
-      const component = render(<User />);
-      getByText = component.getByText;
-    });
+    const { getByText } = render(<User />);
+
+    await waitFor(() => getByText(user.name));
 
     expect(getByText(user.name)).toBeTruthy();
     expect(getByText(user.bio)).toBeTruthy();
@@ -56,16 +49,9 @@ describe('User page', () => {
       params: { user },
     });
 
-    let getByText;
-    let getByTestId;
-    await wait(async () => {
-      const component = render(<User />);
+    const { getByTestId, getByText } = render(<User />);
 
-      getByText = component.getByText;
-      getByTestId = component.getByTestId;
-    });
-
-    await waitForElement(() => getByTestId(`repository_${repository.id}`));
+    await waitFor(() => getByTestId(`repository_${repository.id}`));
 
     expect(getByText(repository.name)).toBeTruthy();
     expect(getByText(repository.owner.login)).toBeTruthy();
@@ -80,22 +66,19 @@ describe('User page', () => {
       params: { user },
     });
 
-    let getByTestId;
-    await wait(async () => {
-      const component = render(<User />);
+    const { getByTestId } = render(<User />);
 
-      getByTestId = component.getByTestId;
+    await waitFor(() => getByTestId(`repository_${repository.id}`));
+    await act(async () => {
+      fireEvent.press(getByTestId(`repository_${repository.id}`));
     });
-
-    await waitForElement(() => getByTestId(`repository_${repository.id}`));
-    fireEvent.press(getByTestId(`repository_${repository.id}`));
 
     expect(mockedNavigate).toHaveBeenCalledWith('Repository', { repository });
   });
 
   it('should be able to get the second page of starred repos', async () => {
     const user = await factory.attrs('User');
-    const [page_1, page_2] = await factory.attrsMany('Repository', 2);
+    const [page1, page2] = await factory.attrsMany('Repository', 2);
 
     apiMock
       .onGet(`${url}${user.login}/starred`, {
@@ -103,30 +86,25 @@ describe('User page', () => {
           page: 1,
         },
       })
-      .reply(200, [page_1])
+      .reply(200, [page1])
       .onGet(`${url}${user.login}/starred`, {
         params: {
           page: 2,
         },
       })
-      .reply(200, [page_2]);
+      .reply(200, [page2]);
 
     mockedRoute = () => ({
       params: { user },
     });
 
-    let getByType;
-    let getByTestId;
-    await wait(async () => {
-      const component = render(<User />);
+    const { getByTestId } = render(<User />);
 
-      getByTestId = component.getByTestId;
-      getByType = component.getByType;
-    });
+    await waitFor(() => getByTestId(`repository_${page1.id}`));
 
-    await waitForElement(() => getByTestId(`repository_${page_1.id}`));
-    await wait(async () => {
-      fireEvent.scroll(getByType('ScrollView'), {
+    const repository = getByTestId(`repository_${page1.id}`);
+    await act(async () => {
+      fireEvent.scroll(repository.parent, {
         nativeEvent: {
           contentOffset: {
             y: 221,
@@ -143,7 +121,7 @@ describe('User page', () => {
       });
     });
 
-    expect(getByTestId(`repository_${page_2.id}`)).toBeTruthy();
+    expect(getByTestId(`repository_${page2.id}`)).toBeTruthy();
   });
 
   it('should not be able to get the second page of starred repos', async () => {
@@ -168,18 +146,13 @@ describe('User page', () => {
       params: { user },
     });
 
-    let getByType;
-    let getByTestId;
-    await wait(async () => {
-      const component = render(<User />);
+    const { getByTestId } = render(<User />);
 
-      getByTestId = component.getByTestId;
-      getByType = component.UNSAFE_getByType;
-    });
+    await waitFor(() => getByTestId(`repository_${repo.id}`));
 
-    await waitForElement(() => getByTestId(`repository_${repo.id}`));
-    await wait(async () => {
-      fireEvent.scroll(getByType('ScrollView'), {
+    const repository = getByTestId(`repository_${repo.id}`);
+    await act(async () => {
+      fireEvent.scroll(repository.parent, {
         nativeEvent: {
           contentOffset: {
             y: 221,
