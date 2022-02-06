@@ -1,11 +1,11 @@
 # [App] GitHub Explorer
 ![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/github-explorer-app?style=flat-square&logo=circleci)
-[![react-native](https://img.shields.io/badge/react--native-0.61.5-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
-[![styled-components](https://img.shields.io/badge/styled_components-4.4.1-db7b86?style=flat-square&logo=styled-components)](https://styled-components.com/)
-[![eslint](https://img.shields.io/badge/eslint-6.8.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
+[![react-native](https://img.shields.io/badge/react--native-0.67.2-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
+[![styled-components](https://img.shields.io/badge/styled_components-5.3.3-db7b86?style=flat-square&logo=styled-components)](https://styled-components.com/)
+[![eslint](https://img.shields.io/badge/eslint-8.8.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
-[![jest](https://img.shields.io/badge/jest-24.9.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
-[![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/github-explorer-app?logo=codecov&style=flat-square)](https://codecov.io/gh/DiegoVictor/github-explorer-app)
+[![jest](https://img.shields.io/badge/jest-27.5.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
+![Codecov](https://img.shields.io/codecov/c/github/diegovictor/github-explorer-app?logo=codecov&style=flat-square)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/DiegoVictor/github-explorer-app/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 
