@@ -53,14 +53,14 @@ export default () => {
   }, []);
 
   useEffect(() => {
-    (async () => {
-      const { data } = await api.get(`/users/${user.login}/starred`, {
+    api
+      .get(`/users/${user.login}/starred`, {
         params: { page },
+      })
+      .then(({ data }) => {
+        setStars(data);
+        setLoading(false);
       });
-
-      setStars(data);
-      setLoading(false);
-    })();
   }, []);
 
   return (
