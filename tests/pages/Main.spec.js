@@ -1,11 +1,7 @@
 import React from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
-import { wait } from '@testing-library/react-native';
-import {
-  render,
-  fireEvent,
-  waitForElement,
-} from 'react-native-testing-library';
+import { act, waitFor } from '@testing-library/react-native';
+import { render, fireEvent } from 'react-native-testing-library';
 import MockAdapter from 'axios-mock-adapter';
 import { Keyboard, Alert } from 'react-native';
 import faker from 'faker';
@@ -38,23 +34,15 @@ describe('Main page', () => {
     const dismiss = jest.fn();
     jest.spyOn(Keyboard, 'dismiss').mockImplementation(dismiss);
 
-    let getByPlaceholder;
-    let getByTestId;
-    let getByText;
-    await wait(async () => {
-      const component = render(<Main />);
+    const { getByPlaceholder, getByTestId, getByText } = render(<Main />);
 
-      getByPlaceholder = component.getByPlaceholder;
-      getByTestId = component.getByTestId;
-      getByText = component.getByText;
-    });
-    await wait(async () => {
+    await waitFor(async () => {
       fireEvent.changeText(
         getByPlaceholder('Digite um nome de usuário'),
         username,
       );
     });
-    await wait(async () => {
+    await act(async () => {
       fireEvent.press(getByTestId('add_user'));
     });
 
@@ -74,23 +62,15 @@ describe('Main page', () => {
     const dismiss = jest.fn();
     jest.spyOn(Keyboard, 'dismiss').mockImplementation(dismiss);
 
-    let getByPlaceholder;
-    let getByTestId;
-    let getByText;
-    await wait(async () => {
-      const component = render(<Main />);
+    const { getByPlaceholder, getByTestId, getByText } = render(<Main />);
 
-      getByPlaceholder = component.getByPlaceholder;
-      getByTestId = component.getByTestId;
-      getByText = component.getByText;
-    });
-    await wait(async () => {
+    await act(async () => {
       fireEvent.changeText(
         getByPlaceholder('Digite um nome de usuário'),
         username,
       );
     });
-    await wait(async () => {
+    await act(async () => {
       fireEvent.press(getByTestId('add_user'));
     });
 
@@ -104,16 +84,9 @@ describe('Main page', () => {
     const dismiss = jest.fn();
     jest.spyOn(Keyboard, 'dismiss').mockImplementation(dismiss);
 
-    let getByTestId;
-    let getByText;
-    await wait(async () => {
-      const component = render(<Main />);
+    const { getByTestId, getByText } = render(<Main />);
 
-      getByTestId = component.getByTestId;
-      getByText = component.getByText;
-    });
-
-    await wait(async () => {
+    await act(async () => {
       fireEvent.press(getByTestId('add_user'));
     });
 
@@ -132,21 +105,15 @@ describe('Main page', () => {
     jest.spyOn(Keyboard, 'dismiss').mockImplementation(dismiss);
     jest.spyOn(Alert, 'alert').mockImplementation(alert);
 
-    let getByPlaceholder;
-    let getByTestId;
-    await wait(async () => {
-      const component = render(<Main />);
+    const { getByPlaceholder, getByTestId } = render(<Main />);
 
-      getByPlaceholder = component.getByPlaceholder;
-      getByTestId = component.getByTestId;
-    });
-    await wait(async () => {
+    await act(async () => {
       fireEvent.changeText(
         getByPlaceholder('Digite um nome de usuário'),
         username,
       );
     });
-    await wait(async () => {
+    await act(async () => {
       fireEvent.press(getByTestId('add_user'));
     });
 
@@ -161,16 +128,10 @@ describe('Main page', () => {
 
     await AsyncStorage.setItem('users', JSON.stringify([user]));
 
-    let getByTestId;
-    let queryByTestId;
-    await wait(async () => {
-      const component = render(<Main />);
+    const { getByTestId, queryByTestId } = render(<Main />);
 
-      getByTestId = component.getByTestId;
-      queryByTestId = component.queryByTestId;
-    });
-
-    await wait(async () => {
+    await waitFor(() => getByTestId(`user_remove_${user.login}`));
+    await act(async () => {
       fireEvent.press(getByTestId(`user_remove_${user.login}`));
     });
 
@@ -182,15 +143,10 @@ describe('Main page', () => {
 
     await AsyncStorage.setItem('users', JSON.stringify([user]));
 
-    let getByTestId;
-    await wait(async () => {
-      const component = render(<Main />);
+    const { getByTestId } = render(<Main />);
 
-      getByTestId = component.getByTestId;
-    });
-
-    await waitForElement(() => getByTestId(`user_${user.login}`));
-    await wait(async () => {
+    await waitFor(() => getByTestId(`user_${user.login}`));
+    await act(async () => {
       fireEvent.press(getByTestId(`user_${user.login}`));
     });
 
