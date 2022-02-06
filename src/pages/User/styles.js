@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import { RectButton } from 'react-native-gesture-handler';
 
 import Logo from '~/assets/logo.png';
 
@@ -90,7 +89,7 @@ export const EmptyListText = styled.Text`
   padding: 20px;
 `;
 
-export const Starred = styled(RectButton)`
+export const Starred = styled.TouchableOpacity`
   align-items: center;
   background-color: #ffffff;
   border-radius: 10px;
