@@ -4,7 +4,7 @@ import { act, waitFor } from '@testing-library/react-native';
 import { render, fireEvent } from 'react-native-testing-library';
 import MockAdapter from 'axios-mock-adapter';
 import { Keyboard, Alert } from 'react-native';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 import api from '~/services/github';
 import factory from '../utils/factory';
