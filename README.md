@@ -6,7 +6,7 @@
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 [![jest](https://img.shields.io/badge/jest-27.5.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 ![Codecov](https://img.shields.io/codecov/c/github/diegovictor/github-explorer-app?logo=codecov&style=flat-square)
-[![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/DiegoVictor/github-explorer-app/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/DiegoVictor/github-explorer-app/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 
 This app allow to users track github's users and see their starred projects.
@@ -22,9 +22,9 @@ This app allow to users track github's users and see their starred projects.
 
 # Screenshots
 Click to expand.<br>
-<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/master/screenshots/main.png" width="32%" />
-<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/master/screenshots/user.png" width="32%" />
-<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/master/screenshots/repo.png" width="32%" />
+<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/main/screenshots/main.png" width="32%" />
+<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/main/screenshots/user.png" width="32%" />
+<img src="https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/main/screenshots/repo.png" width="32%" />
 
 # Installing
 Easy peasy lemon squeezy:
