@@ -5,10 +5,10 @@ factory.define(
   'User',
   {},
   {
-    name: faker.name.findName,
+    name: faker.person.fullName,
     login: faker.internet.userName,
     bio: faker.lorem.paragraph,
-    avatar_url: faker.image.imageUrl,
+    avatar_url: faker.image.url,
   },
 );
 
@@ -16,10 +16,10 @@ factory.define(
   'Repository',
   {},
   {
-    id: faker.datatype.number,
-    name: faker.name.findName,
+    id: faker.number.int,
+    name: faker.person.fullName,
     owner: {
-      avatar_url: faker.image.imageUrl,
+      avatar_url: faker.image.url,
       login: faker.internet.userName,
     },
   },
