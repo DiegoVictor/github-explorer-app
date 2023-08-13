@@ -1,5 +1,5 @@
 import React from 'react';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { act, waitFor } from '@testing-library/react-native';
 import { render, fireEvent } from 'react-native-testing-library';
 import MockAdapter from 'axios-mock-adapter';
@@ -13,6 +13,7 @@ import Main from '~/pages/Main';
 const mockedNavigate = jest.fn();
 
 jest.mock('react-native-gesture-handler');
+
 jest.mock('@react-navigation/native', () => {
   return {
     ...jest.requireActual('@react-navigation/native'),
@@ -21,6 +22,9 @@ jest.mock('@react-navigation/native', () => {
     }),
   };
 });
+
+jest.mock('@react-native-async-storage/async-storage', () => require('@react-native-async-storage/async-storage/jest/async-storage-mock'));
+
 
 describe('Main page', () => {
   const apiMock = new MockAdapter(api);
