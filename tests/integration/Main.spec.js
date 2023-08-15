@@ -6,14 +6,13 @@ import MockAdapter from 'axios-mock-adapter';
 import { Keyboard, Alert } from 'react-native';
 import { faker } from '@faker-js/faker';
 
-import api from '~/services/github';
 import factory from '../utils/factory';
-import Main from '~/pages/Main';
-
-const mockedNavigate = jest.fn();
+import Main from '../../src/pages/Main';
+import api from '../../src/services/github';
 
 jest.mock('react-native-gesture-handler');
 
+const mockedNavigate = jest.fn();
 jest.mock('@react-navigation/native', () => {
   return {
     ...jest.requireActual('@react-navigation/native'),

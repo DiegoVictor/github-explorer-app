@@ -3,7 +3,7 @@ import { ActivityIndicator } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import api from '~/services/github';
+import api from '../../services/github';
 import {
   Container,
   HeaderContainer,
