@@ -1,10 +1,10 @@
 # [App] GitHub Explorer
 [![buddy pipeline](https://app.buddy.works/diegovictor-github/github-explorer-app/pipelines/pipeline/463059/badge.svg?token=c159fed54bb24f01312ce661e41d6d2194e77a116a43e096fa27e82d5b0245e0 "buddy pipeline")](https://app.buddy.works/diegovictor-github/github-explorer-app/pipelines/pipeline/463059)
-[![react-native](https://img.shields.io/badge/react--native-0.67.2-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
-[![styled-components](https://img.shields.io/badge/styled_components-5.3.3-db7b86?style=flat-square&logo=styled-components)](https://styled-components.com/)
-[![eslint](https://img.shields.io/badge/eslint-8.8.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
+[![react-native](https://img.shields.io/badge/react--native-0.72.3-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
+[![styled-components](https://img.shields.io/badge/styled_components-6.0.7-db7b86?style=flat-square&logo=styled-components)](https://styled-components.com/)
+[![eslint](https://img.shields.io/badge/eslint-8.47.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
-[![jest](https://img.shields.io/badge/jest-27.5.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
+[![jest](https://img.shields.io/badge/jest-29.6.2-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 ![Codecov](https://img.shields.io/codecov/c/github/diegovictor/github-explorer-app?logo=codecov&style=flat-square)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
