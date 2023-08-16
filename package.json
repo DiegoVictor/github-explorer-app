@@ -30,6 +30,7 @@
     "@babel/runtime": "^7.5.0",
     "@faker-js/faker": "^8.0.2",
     "@react-native-community/eslint-config": "^3.0.1",
+    "@react-native/metro-config": "^0.72.11",
     "@testing-library/jest-native": "^5.4.2",
     "@testing-library/react-native": "^12.2.0",
     "@types/jest": "^29.5.3",
