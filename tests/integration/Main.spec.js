@@ -1,7 +1,7 @@
 import React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { act, waitFor } from '@testing-library/react-native';
-import { render, fireEvent } from 'react-native-testing-library';
+import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
+// import { render, fireEvent } from 'react-native-testing-library';
 import MockAdapter from 'axios-mock-adapter';
 import { Keyboard, Alert } from 'react-native';
 import { faker } from '@faker-js/faker';
@@ -9,8 +9,6 @@ import { faker } from '@faker-js/faker';
 import factory from '../utils/factory';
 import Main from '../../src/pages/Main';
 import api from '../../src/services/github';
-
-jest.mock('react-native-gesture-handler');
 
 const mockedNavigate = jest.fn();
 jest.mock('@react-navigation/native', () => {
@@ -38,11 +36,11 @@ describe('Main page', () => {
     const dismiss = jest.fn();
     jest.spyOn(Keyboard, 'dismiss').mockImplementation(dismiss);
 
-    const { getByPlaceholder, getByTestId, getByText } = render(<Main />);
+    const { getByPlaceholderText, getByTestId, getByText } = render(<Main />);
 
     await waitFor(async () => {
       fireEvent.changeText(
-        getByPlaceholder('Digite um nome de usuário'),
+        getByPlaceholderText('Digite um nome de usuário'),
         username,
       );
     });
@@ -66,11 +64,11 @@ describe('Main page', () => {
     const dismiss = jest.fn();
     jest.spyOn(Keyboard, 'dismiss').mockImplementation(dismiss);
 
-    const { getByPlaceholder, getByTestId, getByText } = render(<Main />);
+    const { getByPlaceholderText, getByTestId, getByText } = render(<Main />);
 
     await act(async () => {
       fireEvent.changeText(
-        getByPlaceholder('Digite um nome de usuário'),
+        getByPlaceholderText('Digite um nome de usuário'),
         username,
       );
     });
@@ -109,11 +107,11 @@ describe('Main page', () => {
     jest.spyOn(Keyboard, 'dismiss').mockImplementation(dismiss);
     jest.spyOn(Alert, 'alert').mockImplementation(alert);
 
-    const { getByPlaceholder, getByTestId } = render(<Main />);
+    const { getByPlaceholderText, getByTestId } = render(<Main />);
 
     await act(async () => {
       fireEvent.changeText(
-        getByPlaceholder('Digite um nome de usuário'),
+        getByPlaceholderText('Digite um nome de usuário'),
         username,
       );
     });
