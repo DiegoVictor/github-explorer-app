@@ -10,7 +10,7 @@ export const Container = styled.View`
 export const Header = styled.View`
   align-items: center;
   background-color: #121214;
-  padding: 10px 20px 10px;
+  padding: 40px 20px 20px;
 `;
 
 export const HeaderImage = styled.Image.attrs({
