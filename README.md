@@ -1,5 +1,5 @@
 # [App] GitHub Explorer
-[![buddy pipeline](https://app.buddy.works/diegovictor-github/github-explorer-app/pipelines/pipeline/463059/badge.svg?token=c159fed54bb24f01312ce661e41d6d2194e77a116a43e096fa27e82d5b0245e0 "buddy pipeline")](https://app.buddy.works/diegovictor-github/github-explorer-app/pipelines/pipeline/463059)
+[![AppVeyor](https://img.shields.io/appveyor/build/diegovictor/github-explorer-app?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/DiegoVictor/github-explorer-app)
 [![react-native](https://img.shields.io/badge/react--native-0.72.3-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
 [![styled-components](https://img.shields.io/badge/styled_components-6.0.7-db7b86?style=flat-square&logo=styled-components)](https://styled-components.com/)
 [![eslint](https://img.shields.io/badge/eslint-8.47.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
