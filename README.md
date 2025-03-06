@@ -6,7 +6,7 @@
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 [![jest](https://img.shields.io/badge/jest-29.6.2-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 [![expo](https://img.shields.io/badge/expo-49.0.7-000000?style=flat-square&logo=expo)](https://expo.io/)
-![Codecov](https://img.shields.io/codecov/c/github/diegovictor/github-explorer-app?logo=codecov&style=flat-square)
+[![coverage](https://img.shields.io/codecov/c/github/diegovictor/github-explorer-app?logo=codecov&style=flat-square)](https://app.codecov.io/gh/DiegoVictor/github-explorer-app)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/github-explorer-app/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 
