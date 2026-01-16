@@ -20,10 +20,10 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
-describe('User page', () => {
-  const apiMock = new MockAdapter(api);
-  const url = 'https://api.github.com/users/';
+const apiMock = new MockAdapter(api);
+const url = 'https://api.github.com/users/';
 
+describe('User page', () => {
   it('should be able to see user details', async () => {
     const user = await factory.attrs('User');
     mockedRoute = () => ({
