@@ -102,24 +102,10 @@ describe('User page', () => {
 
     await waitFor(() => getByTestId(`repository_${page1.id}`));
 
-    const repository = getByTestId(`repository_${page1.id}`);
-    await act(async () => {
-      fireEvent.scroll(repository.parent, {
-        nativeEvent: {
-          contentOffset: {
-            y: 221,
-          },
-          contentSize: {
-            height: 200,
-            width: 100,
-          },
-          layoutMeasurement: {
-            height: 100,
-            width: 100,
-          },
-        },
-      });
-    });
+    const flatList = getByTestId('list');
+    fireEvent(flatList, 'onEndReached');
+
+    await waitFor(() => getByTestId(`repository_${page2.id}`));
 
     expect(getByTestId(`repository_${page2.id}`)).toBeTruthy();
   });
