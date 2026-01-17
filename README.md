@@ -3,6 +3,7 @@
 [![AppVeyor](https://img.shields.io/appveyor/build/diegovictor/github-explorer-app?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/DiegoVictor/github-explorer-app)
 [![react-native](https://img.shields.io/badge/react--native-0.81.5-61dafb?style=flat-square&logo=react)](https://reactnative.dev/)
 [![styled-components](https://img.shields.io/badge/styled_components-6.3.6-db7b86?style=flat-square&logo=styled-components)](https://styled-components.com/)
+[![eslint](https://img.shields.io/badge/eslint-9.39.2-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 [![jest](https://img.shields.io/badge/jest-30.2.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 [![expo](https://img.shields.io/badge/expo-54.0.31-000000?style=flat-square&logo=expo)](https://expo.io/)
