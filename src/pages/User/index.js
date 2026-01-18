@@ -9,7 +9,7 @@ import {
   Header,
   BackButton,
   HeaderImage,
-  User,
+  Profile,
   Avatar,
   Name,
   Bio,
@@ -73,11 +73,11 @@ export const User = () => {
           <HeaderImage />
         </Header>
 
-        <User>
+        <Profile>
           <Avatar source={{ uri: user.avatar }} />
           <Name>{user.name}</Name>
           <Bio>{user.bio}</Bio>
-        </User>
+        </Profile>
       </HeaderContainer>
 
       {loading ? (
