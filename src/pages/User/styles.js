@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-
 import Logo from '../../assets/logo.png';
 
 export const Container = styled.View`
@@ -31,7 +30,7 @@ export const HeaderImage = styled.Image.attrs({
   width: 165px;
 `;
 
-export const User = styled.View`
+export const Profile = styled.View`
   align-items: center;
   justify-content: center;
   margin-top: 20px;
