@@ -4,8 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import * as Yup from 'yup';
 import { useNavigation } from '@react-navigation/native';
-
-import api from '../../services/github';
+import { api } from '../../services/github';
 import {
   Container,
   Header,
