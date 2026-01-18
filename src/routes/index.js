@@ -7,7 +7,7 @@ import User from '../pages/User';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
-export default () => {
+export const Routes = () => {
   return (
     <NavigationContainer>
       <Navigator
