@@ -25,7 +25,7 @@ import {
   Action,
 } from './styles';
 
-export default () => {
+export const Main = () => {
   const [newUser, setNewUser] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');

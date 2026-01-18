@@ -1,7 +1,6 @@
 import { WebView } from 'react-native-webview';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
 import {
   Container,
   HeaderContainer,
@@ -10,7 +9,7 @@ import {
   HeaderImage,
 } from './styles';
 
-export default () => {
+export const Repository = () => {
   const route = useRoute();
   const navigation = useNavigation();
 

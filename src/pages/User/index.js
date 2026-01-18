@@ -24,7 +24,7 @@ import {
   Loading,
 } from './styles';
 
-export default () => {
+export const User = () => {
   const [stars, setStars] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
