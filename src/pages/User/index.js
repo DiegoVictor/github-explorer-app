@@ -39,9 +39,7 @@ export const User = () => {
       params: { page: page + 1 },
     });
 
-    if (data.length > 0) {
-      setStars([...stars, ...data]);
-    }
+    setStars([...stars, ...data]);
 
     setPage(page + 1);
     setLoading(false);
