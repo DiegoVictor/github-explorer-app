@@ -27,7 +27,7 @@ describe('Main page', () => {
   const apiMock = new MockAdapter(api);
 
   it('should be able to add user', async () => {
-    const username = faker.internet.userName();
+    const username = faker.internet.username();
     const user = await factory.attrs('User');
 
     apiMock.onGet(`https://api.github.com/users/${username}`).reply(200, user);
@@ -54,7 +54,7 @@ describe('Main page', () => {
   });
 
   it('should not be able to add an user twice', async () => {
-    const username = faker.internet.userName();
+    const username = faker.internet.username();
     const user = await factory.attrs('User', { login: username });
 
     await AsyncStorage.setItem('users', JSON.stringify([user]));
@@ -96,7 +96,7 @@ describe('Main page', () => {
   });
 
   it('should not be able to add invalid user', async () => {
-    const username = faker.internet.userName();
+    const username = faker.internet.username();
 
     await AsyncStorage.setItem('users', JSON.stringify([]));
     apiMock.onGet(`https://api.github.com/users/${username}`).reply(400);

@@ -6,7 +6,7 @@ factory.define(
   {},
   {
     name: faker.person.fullName,
-    login: faker.internet.userName,
+    login: faker.internet.username,
     bio: faker.lorem.paragraph,
     avatar_url: faker.image.url,
   },
@@ -20,7 +20,7 @@ factory.define(
     name: faker.person.fullName,
     owner: {
       avatar_url: faker.image.url,
-      login: faker.internet.userName,
+      login: faker.internet.username,
     },
   },
 );
