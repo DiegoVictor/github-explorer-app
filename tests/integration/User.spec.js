@@ -1,10 +1,9 @@
-import React from 'react';
-import { act, waitFor, render, fireEvent } from '@testing-library/react-native';
+import { waitFor, render, fireEvent } from '@testing-library/react-native';
 import MockAdapter from 'axios-mock-adapter';
-
-import api from '../../src/services/github';
+import { api } from '../../src/services/github';
 import factory from '../utils/factory';
-import User from '../../src/pages/User';
+import { User } from '../../src/pages/User';
+import { act } from 'react';
 
 const mockedNavigate = jest.fn();
 let mockedRoute = jest.fn();

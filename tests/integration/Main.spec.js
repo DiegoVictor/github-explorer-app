@@ -1,13 +1,11 @@
-import React from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
 import MockAdapter from 'axios-mock-adapter';
 import { Keyboard, Alert } from 'react-native';
 import { faker } from '@faker-js/faker';
-
 import factory from '../utils/factory';
-import Main from '../../src/pages/Main';
-import api from '../../src/services/github';
+import { Main } from '../../src/pages/Main';
+import { api } from '../../src/services/github';
 
 const mockedNavigate = jest.fn();
 jest.mock('@react-navigation/native', () => {
