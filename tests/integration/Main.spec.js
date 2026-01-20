@@ -17,13 +17,9 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
-jest.mock('@react-native-async-storage/async-storage', () =>
-  require('@react-native-async-storage/async-storage/jest/async-storage-mock'),
-);
+const apiMock = new MockAdapter(api);
 
 describe('Main page', () => {
-  const apiMock = new MockAdapter(api);
-
   it('should be able to add user', async () => {
     const username = faker.internet.username();
     const user = await factory.attrs('User');
