@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Keyboard, ActivityIndicator, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@react-native-vector-icons/material-icons';
 import * as Yup from 'yup';
 import { useNavigation } from '@react-navigation/native';
 import { api } from '../../services/github';
@@ -26,7 +26,7 @@ import {
 } from './styles';
 
 export const Main = () => {
-  const [newUser, setNewUser] = useState('');
+  const [username, setUsername] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [users, setUsers] = useState([]);
@@ -39,7 +39,7 @@ export const Main = () => {
       setError('');
 
       const foundUser = users.find(
-        user => user.login.toLowerCase() === newUser.toLowerCase(),
+        user => user.login.toLowerCase() === username.toLowerCase(),
       );
 
       if (foundUser) {
@@ -49,9 +49,9 @@ export const Main = () => {
           .min(3, 'Deve conter pelo menos 3 caracteres')
           .required('Digite um usuário válido');
 
-        await schema.validate(newUser, { abortEarly: false });
+        await schema.validate(username, { abortEarly: false });
 
-        const { data } = await api.get(`/users/${newUser}`);
+        const { data } = await api.get(`/users/${username}`);
         const user = {
           name: data.name.trim(),
           login: data.login.trim(),
@@ -60,7 +60,7 @@ export const Main = () => {
         };
 
         setUsers([user, ...users]);
-        setNewUser('');
+        setUsername('');
 
         await AsyncStorage.setItem('users', JSON.stringify([user, ...users]));
       }
@@ -74,7 +74,7 @@ export const Main = () => {
       setLoading(false);
       Keyboard.dismiss();
     }
-  }, [newUser, users]);
+  }, [username, users]);
 
   const handleRemoveUser = useCallback(
     async login => {
@@ -86,14 +86,14 @@ export const Main = () => {
     [users],
   );
 
-  const handleNavigate = useCallback(user => {
+  const handleNavigate = user => {
     navigation.navigate('User', { user });
-  }, []);
+  };
 
   useEffect(() => {
-    AsyncStorage.getItem('users').then(starred_users => {
-      if (starred_users) {
-        setUsers(JSON.parse(starred_users));
+    AsyncStorage.getItem('users').then(starredUsers => {
+      if (starredUsers) {
+        setUsers(JSON.parse(starredUsers));
       }
     });
   }, []);
@@ -109,16 +109,17 @@ export const Main = () => {
               autoCorrect={false}
               autoCapitalize="none"
               placeholder="Digite um nome de usuário"
-              value={newUser}
-              onChangeText={text => setNewUser(text)}
+              value={username}
+              onChangeText={text => setUsername(text)}
               returnKeyType="send"
               onSubmitEditing={handleAddUser}
+              testID="input_user"
             />
             <Button onPress={handleAddUser} testID="add_user">
               {loading ? (
                 <ActivityIndicator color="#FFF" />
               ) : (
-                <Icon name="search" size={27} color="#FFF" />
+                <MaterialIcons name="search" size={27} color="#FFF" />
               )}
             </Button>
           </Search>
@@ -149,7 +150,7 @@ export const Main = () => {
                   handleRemoveUser(user.login);
                 }}
               >
-                <Icon name="delete" color="#fff" size={15} />
+                <MaterialIcons name="delete" color="#fff" size={15} />
               </Action>
             </Actions>
           </User>
