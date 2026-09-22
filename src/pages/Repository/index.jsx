@@ -1,6 +1,6 @@
 import { WebView } from 'react-native-webview';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@react-native-vector-icons/material-icons';
 import {
   Container,
   HeaderContainer,
@@ -18,7 +18,7 @@ export const Repository = () => {
       <HeaderContainer>
         <Header>
           <BackButton onPress={navigation.goBack}>
-            <Icon name="keyboard-arrow-left" color="#FFF" size={20} />
+            <MaterialIcons name="keyboard-arrow-left" color="#FFF" size={20} />
           </BackButton>
 
           <HeaderImage />
