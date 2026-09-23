@@ -5,10 +5,10 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   {
-    files: ['**/*.{js,mjs,cjs,jsx}'],
+    files: ['**/*.{js,mjs,cjs}'],
     plugins: { js },
-    extends: ['js/recommended', 'plugin:react/jsx-runtime'],
-    languageOptions: { globals: globals.node },
+    extends: ['js/recommended'],
+    languageOptions: { globals: { ...globals.node, ...globals.jest } },
   },
   pluginReact.configs.flat.recommended,
 ]);
