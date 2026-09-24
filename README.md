@@ -18,7 +18,7 @@ This app allow to users track github's users and see their starred projects.
 - [Installing](#installing)
   - [API](#api)
 - [Usage](#usage)
-  - [OS](#os)
+  - [Expo](#expo)
 - [Running the tests](#running-the-tests)
   - [Coverage report](#coverage-report)
 
@@ -56,16 +56,18 @@ The application uses the [GitHub's API](https://developer.github.com/v3) and it 
 The first build must be through USB connection, so connect your device (or just open your emulator) and run:
 
 ```
-$ yarn react-native run-android
+$ npm run android
 ```
 
-Or
+Or:
 
 ```
-$ npx react-native run-android
+$ yarn android
 ```
 
-In the next times you can just run the Metro Bundler server:
+> For iOS use `ios` instead of `android`
+
+For the next time you can just start the server running:
 
 ```
 $ yarn start
@@ -77,11 +79,9 @@ Or:
 $ npm run start
 ```
 
-> See for more information in [Running On Device](https://reactnative.dev/docs/running-on-device).
+## Expo
 
-## OS
-
-This app was tested only with Android through USB connection and [Genymotion](https://www.genymotion.com/) (Emulator), is strongly recommended to use the same operational system, but of course you can use an emulator or a real device connected through wifi or USB.
+This project was built using [Expo](https://expo.dev), to know how to run it in any environment see [Set up your environment](https://docs.expo.dev/get-started/set-up-your-environment).
 
 # Running the tests
 
