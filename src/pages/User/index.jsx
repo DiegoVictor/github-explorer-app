@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@react-native-vector-icons/material-icons';
 import { api } from '../../services/github';
 import {
   Container,
@@ -25,7 +25,7 @@ import {
 } from './styles';
 
 export const User = () => {
-  const [stars, setStars] = useState([]);
+  const [starred, setStarred] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
 
@@ -39,15 +39,15 @@ export const User = () => {
       params: { page: page + 1 },
     });
 
-    setStars([...stars, ...data]);
+    setStarred([...starred, ...data]);
 
     setPage(page + 1);
     setLoading(false);
-  }, [stars, page, user]);
+  }, [starred, page, user]);
 
-  const handlePress = useCallback(repository => {
+  const handlePress = repository => {
     navigation.navigate('Repository', { repository });
-  }, []);
+  };
 
   useEffect(() => {
     api
@@ -55,7 +55,7 @@ export const User = () => {
         params: { page },
       })
       .then(({ data }) => {
-        setStars(data);
+        setStarred(data);
         setLoading(false);
       });
   }, []);
@@ -65,7 +65,7 @@ export const User = () => {
       <HeaderContainer>
         <Header>
           <BackButton onPress={navigation.goBack}>
-            <Icon name="keyboard-arrow-left" color="#FFF" size={20} />
+            <MaterialIcons name="keyboard-arrow-left" color="#FFF" size={20} />
           </BackButton>
 
           <HeaderImage />
@@ -85,7 +85,7 @@ export const User = () => {
       ) : (
         <Stars
           testID="list"
-          data={stars}
+          data={starred}
           keyExtractor={star => String(star.id)}
           onEndReachedThreshold={0.2}
           onEndReached={loadMore}
