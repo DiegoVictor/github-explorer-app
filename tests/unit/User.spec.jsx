@@ -1,26 +1,28 @@
 import { waitFor, render, fireEvent } from '@testing-library/react-native';
-import MockAdapter from 'axios-mock-adapter';
-import { api } from '../../src/services/github';
-import factory from '../utils/factory';
+import { factory } from '../utils/factory';
 import { User } from '../../src/pages/User';
-import { act } from 'react';
 
 const mockedNavigate = jest.fn();
 let mockedRoute = jest.fn();
+
 jest.mock('@react-navigation/native', () => {
   return {
     ...jest.requireActual('@react-navigation/native'),
     useNavigation: () => ({
       navigate: mockedNavigate,
     }),
-    useRoute: () => {
-      return mockedRoute();
-    },
+    useRoute: () => mockedRoute(),
   };
 });
 
-const apiMock = new MockAdapter(api);
-const url = 'https://api.github.com/users/';
+const mockApiGet = jest.fn();
+jest.mock('../../src/services/github', () => {
+  return {
+    api: {
+      get: (...args) => mockApiGet(...args),
+    },
+  };
+});
 
 describe('User page', () => {
   it('should be able to see user details', async () => {
@@ -29,9 +31,9 @@ describe('User page', () => {
       params: { user },
     });
 
-    apiMock.onGet(`${url}${user.login}/starred`).reply(200, []);
+    mockApiGet.mockResolvedValueOnce({ data: [] });
 
-    const { getByText } = render(<User />);
+    const { getByText } = await render(<User />);
 
     await waitFor(() => getByText(user.name));
 
@@ -43,12 +45,12 @@ describe('User page', () => {
     const user = await factory.attrs('User');
     const repository = await factory.attrs('Repository');
 
-    apiMock.onGet(`${url}${user.login}/starred`).reply(200, [repository]);
+    mockApiGet.mockResolvedValueOnce({ data: [repository] });
     mockedRoute = () => ({
       params: { user },
     });
 
-    const { getByTestId, getByText } = render(<User />);
+    const { getByTestId, getByText } = await render(<User />);
 
     await waitFor(() => getByTestId(`repository_${repository.id}`));
 
@@ -60,17 +62,15 @@ describe('User page', () => {
     const user = await factory.attrs('User');
     const repository = await factory.attrs('Repository');
 
-    apiMock.onGet(`${url}${user.login}/starred`).reply(200, [repository]);
+    mockApiGet.mockResolvedValueOnce({ data: [repository] });
     mockedRoute = () => ({
       params: { user },
     });
 
-    const { getByTestId } = render(<User />);
+    const { getByTestId } = await render(<User />);
 
     await waitFor(() => getByTestId(`repository_${repository.id}`));
-    await act(async () => {
-      fireEvent.press(getByTestId(`repository_${repository.id}`));
-    });
+    await fireEvent.press(getByTestId(`repository_${repository.id}`));
 
     expect(mockedNavigate).toHaveBeenCalledWith('Repository', { repository });
   });
@@ -79,30 +79,20 @@ describe('User page', () => {
     const user = await factory.attrs('User');
     const [page1, page2] = await factory.attrsMany('Repository', 2);
 
-    apiMock
-      .onGet(`${url}${user.login}/starred`, {
-        params: {
-          page: 1,
-        },
-      })
-      .reply(200, [page1])
-      .onGet(`${url}${user.login}/starred`, {
-        params: {
-          page: 2,
-        },
-      })
-      .reply(200, [page2]);
+    mockApiGet
+      .mockResolvedValueOnce({ data: [page1] })
+      .mockResolvedValueOnce({ data: [page2] });
 
     mockedRoute = () => ({
       params: { user },
     });
 
-    const { getByTestId } = render(<User />);
+    const { getByTestId } = await render(<User />);
 
     await waitFor(() => getByTestId(`repository_${page1.id}`));
 
     const flatList = getByTestId('list');
-    fireEvent(flatList, 'onEndReached');
+    await fireEvent(flatList, 'onEndReached');
 
     await waitFor(() => getByTestId(`repository_${page2.id}`));
 
@@ -113,45 +103,33 @@ describe('User page', () => {
     const user = await factory.attrs('User');
     const repo = await factory.attrs('Repository');
 
-    apiMock
-      .onGet(`${url}${user.login}/starred`, {
-        params: {
-          page: 1,
-        },
-      })
-      .reply(200, [repo])
-      .onGet(`${url}${user.login}/starred`, {
-        params: {
-          page: 2,
-        },
-      })
-      .reply(200, []);
+    mockApiGet
+      .mockResolvedValueOnce({ data: [repo] })
+      .mockResolvedValueOnce({ data: [] });
 
     mockedRoute = () => ({
       params: { user },
     });
 
-    const { getByTestId } = render(<User />);
+    const { getByTestId } = await render(<User />);
 
     await waitFor(() => getByTestId(`repository_${repo.id}`));
 
     const repository = getByTestId(`repository_${repo.id}`);
-    await act(async () => {
-      fireEvent.scroll(repository.parent, {
-        nativeEvent: {
-          contentOffset: {
-            y: 221,
-          },
-          contentSize: {
-            height: 200,
-            width: 100,
-          },
-          layoutMeasurement: {
-            height: 100,
-            width: 100,
-          },
+    await fireEvent.scroll(repository.parent, {
+      nativeEvent: {
+        contentOffset: {
+          y: 221,
         },
-      });
+        contentSize: {
+          height: 200,
+          width: 100,
+        },
+        layoutMeasurement: {
+          height: 100,
+          width: 100,
+        },
+      },
     });
 
     expect(getByTestId(`repository_${repo.id}`)).toBeTruthy();
